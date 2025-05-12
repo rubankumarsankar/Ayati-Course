@@ -1,0 +1,77 @@
+/* .hero-section {
+  height: 100vh;
+  background-image: linear-gradient(rgba(92, 206, 240, 0.5), rgb(255, 255, 255)), url('/public/bg-grid.png');
+  background-size: cover;
+  background-position: center;
+  transition: background 0.5s ease-in-out;
+} */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%, center;
+  }
+  50% {
+    background-position: 100% 50%, center;
+  }
+  100% {
+    background-position: 0% 50%, center;
+  }
+}
+
+.hero-section {
+  height: 100vh;
+  background-image: linear-gradient(120deg, rgba(238, 231, 231, 0), rgba(48, 174, 213, 0.438)), url('/bg-grid.png');
+  background-size: 300% 300%, cover;
+  background-position: 0% 50%, center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* <-- This keeps the bg image fixed */
+  animation: gradientMove 10s ease infinite;
+}
+
+
+
+.fade-container {
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  position: relative;
+}
+
+.fade-text {
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+  position: absolute;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.nav-button{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.nav-button:hover{
+  color: rgb(15, 95, 156);
+  font-weight: bold;
+}
+
+button{
+  /* color: white; */
+  /* background-color: #1DA3DD; */
+  border-radius: 50px;
+}
+.btn{
+  /* color: #1DA3DD; */
+  /* background-color: white; */
+  border-radius: 50px;
+  
+}
+
