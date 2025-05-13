@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../styles/home.css";
 import { ImPower } from "react-icons/im";
+import Eg1 from "./eg1";
 
 export default function PMMCoursePage() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,7 +29,7 @@ export default function PMMCoursePage() {
   };
 
   return (
-    <div className="bg-gradient-to-r from-blue-50 to-white min-h-screen hero-section">
+    <section className="bg-gradient-to-r from-blue-50 to-white min-h-screen hero-section">
       {/* Header */}
       <header>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
@@ -39,10 +40,16 @@ export default function PMMCoursePage() {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex space-x-6 text-gray-700 font-medium">
-            <a href="#home" className="hover:text-sky-600 transition nav-button">
+            <a
+              href="#home"
+              className="hover:text-sky-600 transition nav-button"
+            >
               Home
             </a>
-            <a href="#contact" className="hover:text-sky-600 transition nav-button">
+            <a
+              href="#contact"
+              className="hover:text-sky-600 transition nav-button"
+            >
               Contact us
             </a>
           </nav>
@@ -52,11 +59,26 @@ export default function PMMCoursePage() {
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden text-gray-700 focus:outline-none"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
               {isOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
               ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               )}
             </svg>
           </button>
@@ -80,21 +102,22 @@ export default function PMMCoursePage() {
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
           Ayatiworks Performance{" "}
           <br className="hidden md:block mt-3 text-sky-600" />
-          Marketing Mastery {" "}
+          Marketing Mastery{" "}
           <span className="inline-block mt-3 text-sky-400">
-            <ImPower style={{height:35,}} />
+            <ImPower style={{ height: 35 }} />
           </span>{" "}
           Course
         </h1>
 
-        <h4 className="text-gray-500 mb-6 mt-5 text-lg md:text-xl tracking-tight">
-          Learn in-demand skills, earn industry certifications, and get career support in our 
-            Online Program. Conducted by Industry Experts you can Trust.
-        </h4>
-        <p className="text-black-800 mb-8 mt-3 font-bold text-sm md:text-base">30 days Live PMM Course.</p>
+        <p className="text-muted mt-3 mb-3">
+          Learn in-demand skills, earn industry certifications, and get career
+          support in our <br className="d-none d-md-block" />
+          Online Program. Conducted by Industry Experts you can Trust.
+        </p>
+        <h5 className="mb-2">30 days Live PMM Course</h5>
 
         {/* Typewriter Text */}
-        <div className="fade-container mb-6">
+        <div className="fade-container mt-4 mb-6">
           <span className={`fade-text ${fade ? "fade-in" : "fade-out"}`}>
             {texts[currentTextIndex]}
           </span>
@@ -102,19 +125,40 @@ export default function PMMCoursePage() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col md:flex-row justify-center gap-5 mb-12 mt-6">
-           <button
+          {/*  Home Icon */}
+          {/* <i
+            className="bi bi-meta position-absolute text-primary fs-1 animate-bounce "
+            style={{ top: "200px", left: "350px" }}
+          ></i>
+          <i
+            className="bi bi-youtube position-absolute text-danger fs-2 animate-rotate"
+            style={{ top: "200px", right: "350px" }}
+          ></i> */}
+
+          <button
             type="button"
-            class="text-white bg-sky-700 hover:bg-sky-800 focus:ring-4 focus:ring-sky-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-sky-600 dark:hover:bg-sky-700 focus:outline-none dark:focus:ring-sky-800"
-          onClick={() => setIsOpen(true)}>
+            class="text-white bg-sky-300 hover:bg-sky-800 focus:ring-4 focus:ring-sky-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-sky-500 dark:hover:bg-sky-600 focus:outline-none dark:focus:ring-sky-700"
+            onClick={() => setIsOpen(true)}
+          >
             Get Started
           </button>
 
-           <button
+          <button
             type="button"
             class="text-sky-800 hover:text-white border border-sky-700 hover:bg-sky-800 focus:ring-4 focus:outline-none focus:ring-sky-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-sky-500 dark:text-sky-500 dark:hover:text-white dark:hover:bg-sky-500 dark:focus:ring-sky-800"
           >
             Join the Course
           </button>
+
+          {/*  Home Icon */}
+          {/* <i
+            className="bi bi-linkedin position-absolute text-info fs-2 animate-pulse"
+            style={{ bottom: "350px", left: "450px" }}
+          ></i>
+          <i
+            className="bi bi-google position-absolute text-warning fs-2 animate-scale"
+            style={{ bottom: "350px", right: "450px" }}
+          ></i> */}
         </div>
       </main>
 
@@ -169,8 +213,8 @@ export default function PMMCoursePage() {
             <p>Live & Interactive</p>
           </div>
           <div className="px-2 py-2">
-            <h4 className="text-xl font-bold">Hands-On</h4>
-            <p>Learning</p>
+            <h4 className="text-xl font-bold">Hands-</h4>
+            <p>On Learning</p>
           </div>
           <div className="px-2 py-2">
             <h4 className="text-xl font-bold">Certification</h4>
@@ -182,6 +226,6 @@ export default function PMMCoursePage() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

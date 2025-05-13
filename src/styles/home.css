@@ -75,3 +75,38 @@ button{
   
 }
 
+/* BOUNCE */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.animate-bounce {
+  animation: bounce 2s infinite;
+}
+
+/* ROTATE */
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-rotate {
+  animation: rotate 4s linear infinite;
+}
+
+/* PULSE */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+.animate-pulse {
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+/* SCALE */
+@keyframes scale {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(0.85); }
+}
+.animate-scale {
+  animation: scale 3s ease-in-out infinite;
+}
