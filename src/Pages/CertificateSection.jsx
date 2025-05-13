@@ -52,23 +52,25 @@ export default function HighlightsSection() {
       </div>
 
       {/* Certificate Section */}
-      
-      <div className="flex flex-col sm:flex-row items-start w-full  sm:items-center">
-        <div className="w-full text-left bg-white absolute border border-blue-200 shadow-md rounded-lg p-6 sm:w-4/5">
-          <h2 className="text-lg font-bold text-sky-600 mb-1" style={{color:"#16d4f6"}}>
+
+      <div className="w-full flex flex-col-reverse sm:flex-row items-center justify-between gap-6 sm:gap-10 py-10 px-4">
+        {/* Text Content */}
+        <div className="w-full sm:w-2/3 bg-white border border-blue-200 shadow-md rounded-lg p-6">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 text-sky-500">
             Earn Career Certificate
           </h2>
-          <p className="text-gray-700 text-sm">
+          <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
             Add this credential to your LinkedIn profile, resume, or CV. <br />
             Share it on social media and in your performance review.
           </p>
         </div>
-        {/* Image goes on top on small screens, to the right on larger */}
-        <div className="sm:w-1/3 flex relative justify-center top-10 left-180 mb-4 sm:mb-0">
+
+        {/* Certificate Image */}
+        <div className="w-full sm:w-1/3 flex justify-center">
           <img
             src="/Certificate.svg"
             alt="Certificate Preview"
-            className="max-w-[360px]"
+            className="w-full max-w-[300px] sm:max-w-[360px] object-contain"
           />
         </div>
       </div>
