@@ -1,10 +1,6 @@
 import { useState } from "react";
 
-const featureBadges = [
-  { icon: "/Profile.svg", text: "Small Batch Trainings" },
-  { icon: "/Chat.svg", text: "One to One Attention" },
-  { icon: "/Lock.svg", text: "Book Your Spot Now!" },
-];
+
 function NewsBanner() {
   return (
     <section className="w-full bg-sky-50 overflow-hidden py-3">
@@ -14,7 +10,7 @@ function NewsBanner() {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes marquee {
           0% {
             transform: translateX(100%);
