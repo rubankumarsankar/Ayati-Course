@@ -31,12 +31,12 @@ const GetTrainedSection = () => {
           </div>
 
           {/* Heading */}
-          <h2 className="text-4xl font-bold text-primary mb-4">
+          <h2 className="text-4xl font-bold font-primary text-sky mb-4">
             Get Trained by!
           </h2>
 
           {/* Description */}
-          <p className="text-gray-700 leading-relaxed mb-6">
+          <p className="text-gray-700 text-secondary  leading-relaxed mb-6">
             Learn from the Best, Succeed with the Best. Join Ayatiworks'
             expert-led training, designed to equip you with industry-proven
             strategies and insights from professionals who have worked with
@@ -44,7 +44,7 @@ const GetTrainedSection = () => {
           </p>
 
           {/* Button */}
-          <button className="bg-sky-500 hover:bg-sky-600 text-white font-semibold px-6 py-2 rounded-full shadow-md transition-all">
+          <button className="bg-sky-500 text-secondary  hover:bg-sky-600 text-white font-semibold px-6 py-2 rounded-full shadow-md transition-all">
             Read More
           </button>
         </div>
@@ -57,8 +57,8 @@ const GetTrainedSection = () => {
               <div className="absolute -top-[10px] left-4 bg-white px-2 text-sm font-bold">
                 01
               </div>
-              <h3 className="font-bold text-lg mt-4">20+ Years of Expertise</h3>
-              <p className="text-gray-800 mt-2 text-sm">
+              <h3 className="font-bold text-lg font-primary mt-4">20+ Years of Expertise</h3>
+              <p className="text-gray-800 text-secondary  mt-2 text-sm">
                 Learn from seasoned professionals shaping the industry.
               </p>
             </div>
@@ -68,10 +68,10 @@ const GetTrainedSection = () => {
               <div className="absolute -top-[10px] left-4 bg-white px-2 text-sm font-bold">
                 02
               </div>
-              <h3 className="font-bold text-lg mt-4">
+              <h3 className="font-bold font-primary text-lg mt-4">
                 High-Ticket Client Strategies
               </h3>
-              <p className="text-gray-800 mt-2 text-sm">
+              <p className="text-gray-800 text-secondary  mt-2 text-sm">
                 Learn from seasoned professionals shaping the industry.
               </p>
             </div>
@@ -81,8 +81,8 @@ const GetTrainedSection = () => {
               <div className="absolute -top-[10px] left-4 bg-white px-2 text-sm font-bold">
                 03
               </div>
-              <h3 className="font-bold text-lg mt-4">Global Mentorship</h3>
-              <p className="text-gray-800 mt-2 text-sm">
+              <h3 className="font-bold text-lg font-primary mt-4">Global Mentorship</h3>
+              <p className="text-gray-800 mt-2 text-secondary  text-sm">
                 Gain insights from experts handling premium global clients.
               </p>
             </div>

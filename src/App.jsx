@@ -16,7 +16,7 @@ import CourseIntro from './Pages/Courseintro';
 import AboutSection from './Pages/About';
 import Certificate from './Pages/Certificate';
 import FAQSection from './Pages/FAQSection';
-import Footer from './Pages/footer';
+import Footer from './Pages/Footer';
 import ScrollToTopButton from './Pages/ScrollToTopButton';
 import ScrollProgress from './Pages/ScrollProgress';
 import Loader from './Pages/Loader';

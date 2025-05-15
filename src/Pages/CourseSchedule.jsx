@@ -83,7 +83,7 @@ const CourseSchedule = () => {
                 onClick={() => setActiveWeek(i)}
                 className="relative cursor-pointer transition-all"
               >
-                <h4 className={`text-lg font-bold ${i === activeWeek ? "text-blue-600" : "text-gray-600"}`}>
+                <h4 className={`text-lg font-primary font-bold ${i === activeWeek ? "text-blue-600" : "text-gray-600"}`}>
                   {week.title}
                 </h4>
                 {i === activeWeek && (
@@ -91,7 +91,7 @@ const CourseSchedule = () => {
                     initial={{ opacity: 0, y: 4 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -4 }}
-                    className="text-sm text-blue-500"
+                    className="text-sm font-secondary text-blue-500"
                   >
                     {week.subtitle}
                   </motion.p>
@@ -121,7 +121,7 @@ const CourseSchedule = () => {
               {weeks[activeWeek].days.map((day, idx) => (
                 <div key={idx} className="flex items-start gap-2">
                   <div className="pt-1" />
-                  <p className="text-lg text-gray-800">
+                  <p className="text-lg font-tertiary text-gray-800">
                     <span className="font-semibold">
                       Day {weeks[activeWeek].startDay + idx}:
                     </span>{" "}

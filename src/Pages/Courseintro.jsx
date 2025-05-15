@@ -1,31 +1,37 @@
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import "../index.css";
 
 const steps = [
   {
-    icons: ['Message.svg', 'Lock.svg', 'Home.svg', 'Profile.svg', 'Pencil.svg'],
-    text: 'Difference between Performance Marketing & Digital Marketing',
+    icons: ["Message.svg", "Lock.svg", "Home.svg", "Profile.svg", "Pencil.svg"],
+    text: "Difference between Performance Marketing & Digital Marketing",
   },
   {
-    icons: ['Lock.svg', 'Home.svg', 'Profile.svg', 'Pencil.svg', 'Message.svg'],
-    text: 'The current and future demand for Performance Marketers',
+    icons: ["Lock.svg", "Home.svg", "Profile.svg", "Pencil.svg", "Message.svg"],
+    text: "The current and future demand for Performance Marketers",
   },
   {
-    icons: ['Home.svg', 'Profile.svg', 'Pencil.svg', 'Message.svg', 'Lock.svg'],
-    text: 'Remuneration & Career Journey of Performance Marketers',
+    icons: ["Home.svg", "Profile.svg", "Pencil.svg", "Message.svg", "Lock.svg"],
+    text: "Remuneration & Career Journey of Performance Marketers",
   },
   {
-    icons: ['Profile.svg', 'Pencil.svg', 'Message.svg', 'Lock.svg', 'Home.svg'],
-    text: 'A to Z Blueprint of Strategies a Performance Marketer needs to know',
+    icons: ["Profile.svg", "Pencil.svg", "Message.svg", "Lock.svg", "Home.svg"],
+    text: "A to Z Blueprint of Strategies a Performance Marketer needs to know",
   },
   {
-    icons: ['Pencil.svg', 'Message.svg', 'Lock.svg', 'Home.svg', 'Profile.svg'],
-    text: 'Time Tested Growth Hacks a Performance Marketer needs to Master',
+    icons: ["Pencil.svg", "Message.svg", "Lock.svg", "Home.svg", "Profile.svg"],
+    text: "Time Tested Growth Hacks a Performance Marketer needs to Master",
   },
 ];
 
-const sizeClasses = ['w-10 h-10', 'w-12 h-12', 'w-16 h-16', 'w-12 h-12', 'w-10 h-10'];
+const sizeClasses = [
+  "w-10 h-10",
+  "w-12 h-12",
+  "w-16 h-16",
+  "w-12 h-12",
+  "w-10 h-10",
+];
 
 const CourseIntro = () => {
   const [index, setIndex] = useState(0);
@@ -39,7 +45,7 @@ const CourseIntro = () => {
 
   return (
     <div className="flex flex-col items-center justify-center bg-white px-4 sm:px-6 md:px-8 lg:px-12 py-10 md:py-16">
-      <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-center mb-6 sm:mb-8">
+      <h2 className="text-xl sm:text-2xl font-primary text-sky md:text-3xl font-semibold text-center mb-6 sm:mb-8">
         What will you learn in the Course?
       </h2>
 
@@ -52,12 +58,14 @@ const CourseIntro = () => {
           <div
             key={i}
             className={`relative flex items-center justify-center rounded-full shadow-md border bg-white z-10
-            ${sizeClasses[i]} ${i === 2 ? 'ring-4 ring-sky-400' : ''}`}
+            ${sizeClasses[i]} ${i === 2 ? "ring-4 ring-sky-400" : ""}`}
           >
             <img
               src={`/${icon}`}
               alt="icon"
-              className={`object-contain ${i === 2 ? 'w-14 h-14' : 'w-10 h-10'}`}
+              className={`object-contain ${
+                i === 2 ? "w-14 h-14" : "w-10 h-10"
+              }`}
             />
           </div>
         ))}
@@ -72,7 +80,7 @@ const CourseIntro = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-sm sm:text-base md:text-lg font-medium tracking-wide max-w-xl mx-auto mb-8"
+            className="text-sm sm:text-base md:text-lg font-secondary font-medium tracking-wide max-w-xl mx-auto mb-8"
           >
             {steps[index].text}
           </motion.p>

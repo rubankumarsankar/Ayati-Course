@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 
-
 const AboutSection = () => {
   const [isFlipped, setIsFlipped] = useState(false);
 
@@ -21,7 +20,7 @@ const AboutSection = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-sky font-bold text-3xl md:text-5xl"
+            className="text-sky font-bold font-primary text-4xl md:text-5xl"
           >
             Founder & CEO
           </motion.h2>
@@ -30,7 +29,7 @@ const AboutSection = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-3xl md:text-5xl font-bold"
+            className="text-3xl font-secondary md:text-5xl font-bold"
           >
             Upendran
           </motion.h1>
@@ -39,16 +38,16 @@ const AboutSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="text-gray-600 text-lg"
+            className="text-gray-600 font-tertiary text-lg"
           >
-            Digital Marketer, Entrepreneur, Sales Trainer & A Mentor.
+            Digital Marketer, Entrepreneur, Sales Trainer & A Mentor .
           </motion.p>
 
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.2, delay: 0.6 }}
-            className="font-semibold text-black text-lg"
+            className="font-semibold font-secondary text-black text-lg"
           >
             Ayatiworks an Award-Winning Company
           </motion.p>
@@ -95,11 +94,15 @@ const AboutSection = () => {
                   initial={{ scale: 0.8, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 1 + i * 0.2 }}
-                  className="flex items-center space-x-3 px-4 py-2 rounded-lg bg-gray-100 shadow-sm"
+                  className="flex items-center space-x-3  px-4 py-2 rounded-lg bg-gray-100 shadow-sm"
                 >
                   <div>
-                    <p className="text-sm font-bold">{item.title}</p>
-                    <p className="text-xs text-gray-600">{item.subtitle}</p>
+                    <p className="text-sm font-primary font-bold">
+                      {item.title}
+                    </p>
+                    <p className="text-xs font-secondary text-gray-600">
+                      {item.subtitle}
+                    </p>
                   </div>
                 </motion.div>
               ))}
@@ -110,20 +113,20 @@ const AboutSection = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-sky-500 text-white font-bold px-8 py-3 rounded-full shadow"
+              className="bg-sky-500 text-white font-secondary font-bold px-8 py-3 rounded-full shadow"
             >
               Get Started
             </motion.button>
 
             <motion.a
               href="#how-it-works"
-              className="text-black font-medium flex items-center gap-1 hover:underline"
+              className="text-black font-medium font-secondary flex items-center gap-1 hover:underline"
             >
               How it works <ArrowRight className="w-4 h-4" />
             </motion.a>
           </div>
         </div>
-        
+
         {/* Right Image */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
@@ -142,47 +145,46 @@ const AboutSection = () => {
         transition={{ delay: 1.4 }}
         className="bg-gray-50 rounded-xl border mt-12 w-full max-w-4xl text-center"
       >
-        <div className="flex flex-cols-3 md:flex-row justify-center items-center text-gray-700 text-lg font-medium">
+        <div className="flex flex-cols-3 md:flex-row font-secondary justify-center items-center text-gray-700 text-lg font-medium">
           <span>
             Learn Performance Marketing from the Experts who worked with…
           </span>
-           <div className="relative w-32 h-20 perspective">
-      <motion.div
-        animate={{ rotateY: isFlipped ? 180 : 0 }}
-        transition={{ duration: 0.8 }}
-        className="w-full h-full relative"
-        style={{ transformStyle: "preserve-3d" }}
-      >
-        {/* Front - Volvo */}
-        <div className="absolute w-full h-full backface-hidden flex items-center justify-center">
-          <img src="/volvo.svg" alt="Volvo" className="h-8" />
-        </div>
+          <div className="relative w-32 h-20 perspective">
+            <motion.div
+              animate={{ rotateY: isFlipped ? 180 : 0 }}
+              transition={{ duration: 0.8 }}
+              className="w-full h-full relative"
+              style={{ transformStyle: "preserve-3d" }}
+            >
+              {/* Front - Volvo */}
+              <div className="absolute w-full h-full backface-hidden flex items-center justify-center">
+                <img src="/volvo.svg" alt="Volvo" className="h-8" />
+              </div>
 
-        {/* Back - Nippo */}
-        <div className="absolute w-full h-full backface-hidden transform rotateY-180 flex items-center justify-center ">
-          <img src="/nippo.svg" alt="Nippo" className="h-8" />
-        </div>
-      </motion.div>
-    </div>
-    <div className="relative w-32 h-20 perspective">
-      <motion.div
-        animate={{ rotateY: isFlipped ? 180 : 0 }}
-        transition={{ duration: 0.8 }}
-        className="w-full h-full relative"
-        style={{ transformStyle: "preserve-3d" }}
-      >
-        {/* Front - Volvo */}
-        <div className="absolute w-full h-full backface-hidden flex items-center justify-center ">
-          <img src="/nippo.svg" alt="Volvo" className="h-8" />
-        </div>
+              {/* Back - Nippo */}
+              <div className="absolute w-full h-full backface-hidden transform rotateY-180 flex items-center justify-center ">
+                <img src="/nippo.svg" alt="Nippo" className="h-8" />
+              </div>
+            </motion.div>
+          </div>
+          <div className="relative w-32 h-20 perspective">
+            <motion.div
+              animate={{ rotateY: isFlipped ? 180 : 0 }}
+              transition={{ duration: 0.8 }}
+              className="w-full h-full relative"
+              style={{ transformStyle: "preserve-3d" }}
+            >
+              {/* Front - Volvo */}
+              <div className="absolute w-full h-full backface-hidden flex items-center justify-center ">
+                <img src="/nippo.svg" alt="Volvo" className="h-8" />
+              </div>
 
-        {/* Back - Nippo */}
-        <div className="absolute w-full h-full backface-hidden transform rotateY-180 flex items-center justify-center">
-          <img src="/volvo.svg" alt="Nippo" className="h-8" />
-        </div>
-      </motion.div>
-    </div>
-    
+              {/* Back - Nippo */}
+              <div className="absolute w-full h-full backface-hidden transform rotateY-180 flex items-center justify-center">
+                <img src="/volvo.svg" alt="Nippo" className="h-8" />
+              </div>
+            </motion.div>
+          </div>
         </div>
       </motion.div>
     </div>

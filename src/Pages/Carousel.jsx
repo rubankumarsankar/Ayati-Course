@@ -48,10 +48,10 @@ const WhoShouldJoinCarousel = () => {
     <div className="relative py-16 px-4 md:px-12 bg-white font-sans overflow-hidden">
       {/* Heading */}
       <div className="text-center mb-12">
-        <h2 className="text-2xl md:text-3xl font-bold text-sky">
+        <h2 className="text-2xl font-primary md:text-3xl font-bold text-sky">
           You should be a part of our
         </h2>
-        <p className="text-gray-800 text-sm font-bold md:text-base mt-4">
+        <p className="text-gray-800 text-sm font-secondary font-bold md:text-base mt-4">
           Ayatiworks’ Performance Marketing: The 4-Pillar <br />
           Digital Marketing Course
         </p>
@@ -91,7 +91,7 @@ const WhoShouldJoinCarousel = () => {
               className="w-full h-full object-cover"
             />
             <div className="absolute bottom-4 w-full bg-black bg-opacity-50 py-2 text-center">
-              <p className="text-white text-sm font-semibold px-2">
+              <p className="text-white text-sm font-tertiary font-semibold px-2">
                 {audience.title}
               </p>
             </div>

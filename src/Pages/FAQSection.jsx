@@ -5,16 +5,21 @@ import "../index.css";
 const faqData = {
   "Course Details": [
     {
-      question: "What topics are covered in the Ayatiworks Digital Marketing Training?",
-      answer: "The training covers SEO, SEM, social media marketing, analytics, email campaigns, and more.",
+      question:
+        "What topics are covered in the Ayatiworks Digital Marketing Training?",
+      answer:
+        "The training covers SEO, SEM, social media marketing, analytics, email campaigns, and more.",
     },
     {
-      question: "Is this course suitable for beginners with no prior experience?",
-      answer: "Absolutely! It is designed for beginners as well as marketing professionals.",
+      question:
+        "Is this course suitable for beginners with no prior experience?",
+      answer:
+        "Absolutely! It is designed for beginners as well as marketing professionals.",
     },
     {
       question: "How long is the training program?",
-      answer: "The program lasts approximately 6 to 8 weeks, with flexible schedules.",
+      answer:
+        "The program lasts approximately 6 to 8 weeks, with flexible schedules.",
     },
   ],
   Certification: [],
@@ -32,10 +37,10 @@ const FAQSection = () => {
   return (
     <section className="w-full bg-white py-12">
       <div className="container px-4 md:px-10 mx-auto">
-        <h2 className="text-2xl md:text-4xl font-bold text-sky-500 mb-2">
+        <h2 className="text-2xl md:text-4xl font-primary font-bold text-sky mb-3">
           Frequently ask questions
         </h2>
-        <p className="text-gray-800 font-medium mb-8">
+        <p className="text-gray-800 font-secondary font-medium mb-8">
           Got Questions? We’ve Got Answers!
         </p>
 
@@ -49,7 +54,7 @@ const FAQSection = () => {
                   setActiveCategory(category);
                   setOpenIndex(null);
                 }}
-                className={`text-left font-semibold flex items-center transition-all duration-300 ${
+                className={`text-left font-semibold flex font-secondary items-center mb-3 transition-all duration-300 ${
                   activeCategory === category
                     ? "text-black"
                     : "text-gray-400 hover:text-gray-700"
@@ -57,7 +62,7 @@ const FAQSection = () => {
               >
                 {category}
                 {activeCategory === category && (
-                  <span className="ml-2 text-black">{'>'}</span>
+                  <span className="ml-2 text-black">{">"}</span>
                 )}
               </button>
             ))}
@@ -70,7 +75,7 @@ const FAQSection = () => {
                 <div key={index} className="border-b border-gray-200 pb-4">
                   <button
                     onClick={() => handleToggle(index)}
-                    className="flex justify-between items-center w-full text-left text-black font-medium text-sm md:text-base"
+                    className="flex justify-between items-center font-secondary w-full text-left text-black font-medium text-sm md:text-base"
                   >
                     <span>
                       {index + 1}. {faq.question}
@@ -82,7 +87,7 @@ const FAQSection = () => {
                     />
                   </button>
                   <div
-                    className={`transition-all duration-300 text-sm text-gray-600 mt-2 overflow-hidden ${
+                    className={`transition-all duration-300 font-tertiary text-sm text-gray-600 mt-2 overflow-hidden ${
                       openIndex === index ? "max-h-40" : "max-h-0"
                     }`}
                   >
@@ -91,7 +96,9 @@ const FAQSection = () => {
                 </div>
               ))
             ) : (
-              <p className="text-gray-400">No FAQs available for this category yet.</p>
+              <p className="text-gray-400 font-secondary">
+                No FAQs available for this category yet.
+              </p>
             )}
           </div>
         </div>
@@ -101,7 +108,7 @@ const FAQSection = () => {
           <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
             Request More Information
           </h3>
-          <button className="bg-sky-500 text-white font-semibold px-6 py-2 rounded-full hover:bg-sky-600 transition">
+          <button className="bg-sky-500 text-white font-secondary font-semibold px-6 py-2 rounded-full hover:bg-sky-600 transition">
             Contact us
           </button>
         </div>

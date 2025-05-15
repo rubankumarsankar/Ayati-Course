@@ -43,7 +43,7 @@ export default function HighlightsSection() {
                 className="flex items-center gap-1 bg-gray-50  rounded-xl"
               >
                 <img src={badge.icon} alt="" className="w-25 h-20" />
-                <span className="text-sm font-medium text-gray-800">
+                <span className="text-sm text-secondary font-medium text-gray-800">
                   {badge.text}
                 </span>
               </div>
@@ -53,15 +53,15 @@ export default function HighlightsSection() {
       </div>
 
       {/* Certificate Section */}
-      <div className="w-full px-4 py-10 bg-white">
+      <div className="w-full px-4 py-10">
       <div className="max-w-6xl mx-auto flex flex-col-reverse sm:flex-row items-center relative justify-between gap-10">
         {/* Text Content on the Left */}
         <div className="w-full sm:w-3/3 bg-white border flex-col-4 border-blue-200 shadow-md rounded-lg p-6 text-center sm:text-left">
-          <h2 className="text-xl md:text-2xl text-left font-bold text-sky-500 mb-1">
+          <h2 className="text-xl md:text-2xl text-left font-bold text-sky mb-1">
             Earn Career Certificate
           </h2>
           
-          <p className="text-gray-700 text-sm sm:text-base text-left leading-relaxed">
+          <p className="text-gray-700 font-secondary text-sm sm:text-base text-left leading-relaxed">
             Add this credential to your LinkedIn profile, resume, or CV. <br />
             Share it on social media and in your performance review.
           </p>
@@ -72,7 +72,7 @@ export default function HighlightsSection() {
           <img
             src="/Certificate-1.svg"
             alt="Certificate Preview"
-            className="w-full max-w-[350px] items-end sm:max-w-[400px] object-contain shadow-md"
+            className="w-full max-w-[250px] items-end sm:max-w-[300px] object-contain shadow-md"
           />
         </div>
       </div>
@@ -102,14 +102,14 @@ export default function HighlightsSection() {
       </div> */}
 
       {/* Features Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-4 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 py-3 lg:grid-cols-4 gap-3">
         {features1.map((item, index) => (
           <div
             key={index}
             className="flex gap-0 bg-white rounded-xl shadow-md"
           >
             <img src={item.icon} alt="" className="w-20 h-20 " />
-            <p className="text-sm font-bold text-gray-800 mt-4 mr-5">{item.text}</p>
+            <p className="text-sm font-bold font-tertiary text-gray-800 mt-4 mr-5">{item.text}</p>
           </div>
         ))}
       </div>

@@ -24,21 +24,27 @@ const Footer = () => {
 
         {/* Middle: Links */}
         <div className="flex space-x-6 text-sm font-semibold text-gray-700">
-          <a href="/privacy-policy" className="hover:text-sky transition nav-button">
+          <a
+            href="/privacy-policy"
+            className="hover:text-sky font-secondary transition nav-button"
+          >
             Privacy Policy
           </a>
-          <a href="/terms" className="hover:text-sky transition nav-button">
+          <a
+            href="/terms"
+            className="hover:text-sky font-secondary  transition nav-button"
+          >
             Terms & Conditions
           </a>
         </div>
 
         {/* Right: Social Icons */}
-        <div className="flex space-x-4">
+        <div className="flex space-x-5">
           <a
             href="https://linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sky border border-sky-100 p-2 rounded-full hover:bg-sky-100 transition"
+            className="text-sky border border-sky-100 p-2 rounded-full hover:bg-sky-200 hover:tex-white transition"
           >
             <FaLinkedinIn />
           </a>
@@ -46,7 +52,7 @@ const Footer = () => {
             href="https://facebook.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sky border border-sky-100 p-2 rounded-full hover:bg-sky-100 transition"
+            className="text-sky border border-sky-100 p-2 rounded-full hover:bg-sky-200 hover:tex-white transition"
           >
             <FaFacebookF />
           </a>
@@ -54,7 +60,7 @@ const Footer = () => {
             href="https://instagram.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sky border border-sky-100 p-2 rounded-full hover:bg-sky-100 transition"
+            className="text-sky border border-sky-100 p-2 rounded-full hover:bg-sky-200 hover:tex-white transition"
           >
             <FaInstagram />
           </a>
@@ -62,7 +68,7 @@ const Footer = () => {
             href="https://youtube.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sky border border-sky-100 p-2 rounded-full hover:bg-sky-100 transition"
+            className="text-sky border border-sky-100 p-2 rounded-full hover:bg-sky-200 hover:tex-white transition"
           >
             <FaYoutube />
           </a>

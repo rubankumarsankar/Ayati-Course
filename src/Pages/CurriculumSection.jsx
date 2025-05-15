@@ -32,10 +32,10 @@ const curriculumData = [
 const CurriculumSection = () => {
   return (
     <section className="py-15 px-4 max-w-7xl mx-auto">
-      <h2 className="text-4xl sm:text-4xl font-bold text-center text-sky mb-2 py-2">
+      <h2 className="text-4xl sm:text-4xl font-primary font-bold text-center text-sky mb-2 py-2">
         Our Curriculum Covers
       </h2>
-      <p className="text-center text-lg text-black font-medium mb-10 py-4">
+      <p className="text-center font-secondary text-lg text-black font-medium mb-10 py-4">
         Master 19+ powerful digital marketing modules in live interactive
         sessions, <br />
         scheduled from <b>(8:00 PM To 9:00 PM)</b>.
@@ -49,10 +49,10 @@ const CurriculumSection = () => {
           >
             <div>
               <img src={item.logo} alt={item.title} className="h-8 mb-4" />
-              <h3 className="text-lg font-semibold tracking-widest mb-3">
+              <h3 className="text-lg font-semibold font-primary tracking-widest mb-3">
                 {item.title}
               </h3>
-              <p className="text-gray-800 text-sm">{item.description}</p>
+              <p className="text-gray-800 font-secondary text-sm">{item.description}</p>
             </div>
 
             {/* Avatar group */}

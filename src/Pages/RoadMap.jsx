@@ -44,8 +44,8 @@ const RoadMap = () => {
               }}
             >
               <div className=" backdrop-blur-sx  p-2 ">
-                <p className="text-gray-700 font-medium">{step.text}</p>
-                <p className="font-semibold text-sky-600">{step.label}</p>
+                <p className="text-gray-700 font-tertiary font-medium">{step.text}</p>
+                <p className="font-semibold font-tertiary text-sky-600">{step.label}</p>
                 
               </div>
             </motion.div>

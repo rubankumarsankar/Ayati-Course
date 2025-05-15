@@ -6,7 +6,7 @@ function Keypoint() {
     <>
       <section className="container">
         <div className="container bg-sky-50 py-2">
-          <div className=" text-center sky-700 text-xl font-light tracking-wider text-xl">
+          <div className=" text-center text-secondary sky-700 text-xl font-light tracking-wider text-xl">
             Master the Performance Marketing Course & Join the club of Marketers
             who earn 13 LPA
           </div>
