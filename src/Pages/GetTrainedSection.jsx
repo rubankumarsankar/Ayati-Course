@@ -1,4 +1,6 @@
 import React from "react";
+import "../index.css"
+
 
 const GetTrainedSection = () => {
   return (
@@ -29,7 +31,7 @@ const GetTrainedSection = () => {
           </div>
 
           {/* Heading */}
-          <h2 className="text-2xl font-bold text-blue-600 mb-4">
+          <h2 className="text-4xl font-bold text-primary mb-4">
             Get Trained by!
           </h2>
 

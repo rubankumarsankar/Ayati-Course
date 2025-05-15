@@ -42,13 +42,13 @@ export default function PMMCoursePage() {
           <nav className="hidden md:flex space-x-6 text-gray-700 font-medium">
             <a
               href="#home"
-              className="hover:text-sky transition nav-button"
+              className="hover:text-sky-600 transition nav-button"
             >
               Home
             </a>
             <a
               href="#contact"
-              className="hover:text-sky transition nav-button"
+              className="hover:text-sky-600 transition nav-button"
             >
               Contact us
             </a>

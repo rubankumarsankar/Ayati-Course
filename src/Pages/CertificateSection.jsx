@@ -1,4 +1,5 @@
 import React from "react";
+import "../index.css";
 
 const featureBadges = [
   { icon: "/Profile.svg", text: "Small Batch Trainings" },
@@ -52,10 +53,35 @@ export default function HighlightsSection() {
       </div>
 
       {/* Certificate Section */}
+      <div className="w-full px-4 py-10 bg-white">
+      <div className="max-w-6xl mx-auto flex flex-col-reverse sm:flex-row items-center relative justify-between gap-10">
+        {/* Text Content on the Left */}
+        <div className="w-full sm:w-3/3 bg-white border flex-col-4 border-blue-200 shadow-md rounded-lg p-6 text-center sm:text-left">
+          <h2 className="text-xl md:text-2xl text-left font-bold text-sky-500 mb-1">
+            Earn Career Certificate
+          </h2>
+          
+          <p className="text-gray-700 text-sm sm:text-base text-left leading-relaxed">
+            Add this credential to your LinkedIn profile, resume, or CV. <br />
+            Share it on social media and in your performance review.
+          </p>
+        </div>
 
-      <div className="w-full flex flex-col-reverse sm:flex-row items-center justify-between gap-6 sm:gap-10 py-10 px-4">
-        {/* Text Content */}
-        <div className="w-full sm:w-2/3 bg-white border border-blue-200 shadow-md rounded-lg p-6">
+        {/* Certificate Image on the Right */}
+        <div className="w-full flex flex-col-2 absolute justify-end">
+          <img
+            src="/Certificate-1.svg"
+            alt="Certificate Preview"
+            className="w-full max-w-[350px] items-end sm:max-w-[400px] object-contain shadow-md"
+          />
+        </div>
+      </div>
+    </div>
+
+
+      {/* <div className="w-full flex flex-col-reverse sm:flex-row items-center justify-between gap-6 sm:gap-10 py-10 px-4">
+        
+        <div className="w-full sm:w-3/3 flex-cols-2  bg-white border relative border-blue-200 shadow-md rounded-lg p-6">
           <h2 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 text-sky-500">
             Earn Career Certificate
           </h2>
@@ -65,18 +91,18 @@ export default function HighlightsSection() {
           </p>
         </div>
 
-        {/* Certificate Image */}
-        <div className="w-full sm:w-1/3 flex justify-center">
+       
+        <div className="w-100 flex absolute mr-5 justify-end-safe ">
           <img
-            src="/Certificate.svg"
+            src="/Certificate-1.svg"
             alt="Certificate Preview"
-            className="w-full max-w-[300px] sm:max-w-[360px] object-contain"
+            className=" max-w-[250px] sm:max-w-[300px]  rounded-xl shadow-md "
           />
         </div>
-      </div>
+      </div> */}
 
       {/* Features Grid */}
-      {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-4 gap-3">
         {features1.map((item, index) => (
           <div
             key={index}
@@ -87,7 +113,7 @@ export default function HighlightsSection() {
           </div>
         ))}
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-4 gap-3">
+      {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-4 gap-3">
         {features2.map((item, index) => (
           <div
             key={index}
@@ -101,7 +127,7 @@ export default function HighlightsSection() {
 
       {/* Features Section with Animation */}
       {/* Animation styles */}
-      <style>
+      {/* <style>
         {`
           @keyframes scroll-left {
             0% { transform: translateX(0); }
@@ -112,10 +138,9 @@ export default function HighlightsSection() {
             100% { transform: translateX(50%); }
           }
         `}
-      </style>
+      </style> */}
 
-      <div className="space-y-6 overflow-hidden">
-        {/* Left to Right Scroll */}
+      {/* <div className="space-y-6 overflow-hidden">
         <div className="w-full overflow-hidden">
           <div
             className="flex w-max"
@@ -141,7 +166,6 @@ export default function HighlightsSection() {
           </div>
         </div>
 
-        {/* Right to Left Scroll */}
         <div className="w-full overflow-hidden">
           <div
             className="flex w-max"
@@ -166,7 +190,7 @@ export default function HighlightsSection() {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

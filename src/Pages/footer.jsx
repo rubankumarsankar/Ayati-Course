@@ -1,4 +1,6 @@
 import React from "react";
+import "../index.css";
+
 import {
   FaLinkedinIn,
   FaFacebookF,
@@ -22,10 +24,10 @@ const Footer = () => {
 
         {/* Middle: Links */}
         <div className="flex space-x-6 text-sm font-semibold text-gray-700">
-          <a href="/privacy-policy" className="hover:text-sky transition">
+          <a href="/privacy-policy" className="hover:text-sky transition nav-button">
             Privacy Policy
           </a>
-          <a href="/terms" className="hover:text-sky transition">
+          <a href="/terms" className="hover:text-sky transition nav-button">
             Terms & Conditions
           </a>
         </div>

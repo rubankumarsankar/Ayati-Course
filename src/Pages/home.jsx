@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { ImPower } from "react-icons/im";
 import "../styles/home.css";
+import "../index.css";
 
-export default function PMMCoursePage() {
+
+const Hero =() => {
   const [isOpen, setIsOpen] = useState(false);
   const texts = ["Learn", "Advertise", "Succeed"];
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
@@ -27,7 +29,7 @@ export default function PMMCoursePage() {
   };
 
   return (
-    <section className="bg-gradient-to-r from-blue-50 to-white min-h-screen hero-section">
+    <section className="bg-gradient-to-r from-blue-50 to-white min-h-screen hero-section hero-section::before">
       {/* Header */}
       <header className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         <div className="flex items-center gap-3">
@@ -61,16 +63,16 @@ export default function PMMCoursePage() {
 
       {/* Main Hero */}
       <main className="text-center container mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-primary leading-tight mb-4">
           Ayatiworks Performance <br />
           Marketing Mastery{" "}
-          <span className="inline-block mt-2 text-sky">
-            <ImPower style={{ height: 35 }} />
+          <span className="inline-block">
+            <img src="/Vector.svg" alt="" className="h-12" />
           </span>{" "}
           Course
         </h1>
 
-        <p className="text-gray-700 mt-3 mb-3 text-sm sm:text-base md:text-lg lg:text-xl">
+        <p className="text-gray-700 mt-3 mb-3 text-sm sm:text-base font-tertiary md:text-lg lg:text-xl">
           Learn in-demand skills, earn industry certifications, and get career support in our <br className="hidden md:block" />
           Online Program. Conducted by Industry Experts you can Trust.
         </p>
@@ -88,14 +90,14 @@ export default function PMMCoursePage() {
         <div className="flex flex-col md:flex-row justify-center gap-4 mt-4">
           <button
             type="button"
-            className="text-white bg-sky-500 hover:bg-sky-600 focus:ring-4 focus:ring-sky-300 font-medium rounded-lg text-sm sm:text-base md:text-lg px-6 py-2.5"
-            onClick={() => setIsOpen(true)}
+            className="text-white bg-sky-500 hover:bg-sky-600 focus:ring-4 focus:ring-sky-300 font-bold rounded-lg text-sm sm:text-base md:text-lg px-6 py-2.5"
+            
           >
             Get Started
           </button>
           <button
             type="button"
-            className="text-sky-800 hover:text-white border border-sky-700 hover:bg-sky-800 focus:ring-4 focus:outline-none focus:ring-sky-300 font-medium rounded-lg text-sm sm:text-base md:text-lg px-6 py-2.5"
+            className="text-sky-600 hover:text-white border-2 border-white hover:bg-sky-500 focus:ring-4 focus:outline-none font-bold rounded-lg text-sm sm:text-base md:text-lg px-6 py-2.5"
           >
             Join the Course
           </button>
@@ -133,20 +135,20 @@ export default function PMMCoursePage() {
 
       {/* Feature Highlights */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="bg-white rounded-xl shadow-sm grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 text-center text-gray-800 text-sm sm:text-base md:text-lg">
-          <div className="p-4 border rounded">
+        <div className="bg-white font-primary rounded-xl grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 text-center text-gray-800 text-sm sm:text-base md:text-lg">
+          <div className="p-1 rounded">
             <h4 className="text-xl font-bold">100%</h4>
             <p>Live & Interactive</p>
           </div>
-          <div className="p-4 border rounded">
+          <div className="p-1 rounded">
             <h4 className="text-xl font-bold">Hands-</h4>
             <p>On Learning</p>
           </div>
-          <div className="p-4 border rounded">
+          <div className="p-1  rounded">
             <h4 className="text-xl font-bold">Certification</h4>
             <p>Guaranteed</p>
           </div>
-          <div className="p-4 border rounded">
+          <div className="p-1 rounded">
             <h4 className="text-xl font-bold">Bag an Internship</h4>
             <p>in Ayatiworks</p>
           </div>
@@ -156,3 +158,6 @@ export default function PMMCoursePage() {
     </section>
   );
 }
+
+
+export default Hero;

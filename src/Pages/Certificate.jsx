@@ -1,41 +1,40 @@
 import React from "react";
 import { motion } from "framer-motion";
+import "../index.css";
+
 // import certificateImg from "/Clip.svg";
 
 const Certificate = () => {
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-center gap-8 px-4 py-10 bg-white">
-      {/* Left Text Block */}
-      <motion.div
-        initial={{ x: -50, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        className="max-w-md text-center lg:text-left"
-      >
-        <h2 className="text-2xl font-medium text-gray-800 mb-4">
-          Certificate of{" "}
-          <span className="font-semibold text-black">Achievement</span>
-        </h2>
-        <p className="text-gray-600 text-sm leading-relaxed">
-          Gain a recognized Digital Marketing Certification to boost your
-          professional profile and accelerate your career growth.
-        </p>
-      </motion.div>
+    <>
+     <div className="w-full px-4 py-10 bg-white">
+      <div className="max-w-6xl mx-auto flex flex-col-reverse sm:flex-row items-center relative justify-between gap-10">
+        {/* Text Content on the Left */}
+        <div className="w-full sm:w-3/3 bg-white border flex-col-4 border-blue-200 shadow-md rounded-lg p-6 text-center sm:text-left">
+          <h2 className="text-xl md:text-2xl text-left font-bold text-sky-500 mb-1">
+            Certificate of
+          </h2>
+          <h2 className="text-xl md:text-2xl font-bold text-left text-sky-500 mb-4">
+            Achievement
+          </h2>
+          <p className="text-gray-700 text-sm sm:text-base text-left leading-relaxed">
+            Gain a recognized Digital Marketing Certification to boost your <br />
+            professional profile and accelerate your career growth.
+          </p>
+        </div>
 
-      {/* Certificate Image */}
-      <motion.div
-        initial={{ x: 50, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        className="w-full max-w-xl shadow-xl rounded-xl overflow-hidden"
-      >
-        <img
-          src="/Clip.svg"
-          alt="Certificate of Achievement"
-          className="w-full h-auto object-cover"
-        />
-      </motion.div>
+        {/* Certificate Image on the Right */}
+        <div className="w-full flex flex-col-2 absolute justify-end">
+          <img
+            src="/Clip.svg"
+            alt="Certificate Preview"
+            className="w-full max-w-[350px] items-end sm:max-w-[400px] object-contain shadow-md"
+          />
+        </div>
+      </div>
     </div>
+    </>
+   
   );
 };
 

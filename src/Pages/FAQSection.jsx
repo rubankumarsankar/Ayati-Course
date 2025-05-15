@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
+import "../index.css";
 
 const faqData = {
   "Course Details": [

@@ -5,6 +5,40 @@
   background-position: center;
   transition: background 0.5s ease-in-out;
 } */
+/* @keyframes gradientMove {
+  0% {
+    background-position: 0% 50%, center;
+  }
+  50% {
+    background-position: 100% 50%, center;
+  }
+  100% {
+    background-position: 0% 50%, center;
+  }
+} */
+
+/* .hero-section {
+  height: 100vh;
+  background-image: linear-gradient(120deg, rgba(246, 250, 251, 0), rgba(48, 174, 213, 0.438)), url('/bg-grid.png');
+  background-size: 300% 300%, cover;
+  background-position: 0% 50%, center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  animation: gradientMove 5s ease infinite;
+} */
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background-image: linear-gradient(120deg, rgba(255, 73, 73, 0), rgba(63, 199, 240, 0.438)), url('/bg-grid.png');
+  background-size: 300% 300%, cover;
+  background-position: 0% 50%, center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  animation: gradientMove 5s ease infinite;
+  overflow: hidden; /* Ensure animated element stays within */
+}
+
 @keyframes gradientMove {
   0% {
     background-position: 0% 50%, center;
@@ -17,16 +51,30 @@
   }
 }
 
-.hero-section {
-  height: 100vh;
-  background-image: linear-gradient(120deg, rgba(238, 231, 231, 0), rgba(48, 174, 213, 0.438)), url('/bg-grid.png');
-  background-size: 300% 300%, cover;
-  background-position: 0% 50%, center;
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* <-- This keeps the bg image fixed */
-  animation: gradientMove 10s ease infinite;
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: -10%;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(135, 206, 235, 0.3); /* skyblue with transparency */
+  border-radius: 50%;
+  filter: blur(60px);
+  animation: floatCircle 12s linear infinite;
 }
 
+@keyframes floatCircle {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(120vw) translateY(20vh);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
 
 
 .fade-container {

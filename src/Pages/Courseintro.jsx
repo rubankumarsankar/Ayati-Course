@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import "../index.css";
 
 const steps = [
   {
@@ -37,33 +38,33 @@ const CourseIntro = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center bg-white px-4 py-10">
-      <h2 className="text-2xl md:text-3xl font-semibold text-center mb-6">
+    <div className="flex flex-col items-center justify-center bg-white px-4 sm:px-6 md:px-8 lg:px-12 py-10 md:py-16">
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-center mb-6 sm:mb-8">
         What will you learn in the Course?
       </h2>
 
       {/* Timeline Icons */}
-      <div className="relative flex items-center py-10 justify-center space-x-6 mb-6 w-full max-w-3xl">
-        {/* Connecting line */}
-        <div className="absolute top-1/2 left-0 right-0 border-t  border-gray-300 z-0 transform -translate-y-1/2"></div>
+      <div className="relative flex flex-wrap sm:flex-nowrap items-center justify-center gap-4 sm:gap-6 py-6 sm:py-10 mb-6 w-full max-w-4xl">
+        {/* Connecting line (hidden on small screens) */}
+        <div className="hidden sm:block absolute top-1/2 left-0 right-0 border-t border-gray-300 z-0 transform -translate-y-1/2"></div>
 
         {steps[index].icons.map((icon, i) => (
           <div
             key={i}
-            className={`relative flex items-center justify-center ml-12 rounded-full shadow-md border 
+            className={`relative flex items-center justify-center rounded-full shadow-md border bg-white z-10
             ${sizeClasses[i]} ${i === 2 ? 'ring-4 ring-sky-400' : ''}`}
           >
             <img
               src={`/${icon}`}
               alt="icon"
-              className={`object-contain ${i === 2 ? 'w-15 h-15' : 'w-12 h-12'}`}
+              className={`object-contain ${i === 2 ? 'w-14 h-14' : 'w-10 h-10'}`}
             />
           </div>
         ))}
       </div>
 
       {/* Text Animation */}
-      <div className="min-h-[50px]">
+      <div className="min-h-[60px] px-2 sm:px-6 text-center">
         <AnimatePresence mode="wait">
           <motion.p
             key={steps[index].text}
@@ -71,14 +72,14 @@ const CourseIntro = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center text-sm md:text-base font-medium tracking-wide max-w-xl mx-auto mb-10"
+            className="text-sm sm:text-base md:text-lg font-medium tracking-wide max-w-xl mx-auto mb-8"
           >
             {steps[index].text}
           </motion.p>
         </AnimatePresence>
       </div>
 
-      <button className="bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2 px-8 mt-3 rounded-full shadow">
+      <button className="bg-sky-500 hover:bg-sky-600 transition-colors duration-200 text-white font-semibold py-2 px-6 sm:px-8 rounded-full shadow">
         Get Started
       </button>
     </div>

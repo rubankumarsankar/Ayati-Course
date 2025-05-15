@@ -1,7 +1,17 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { useState, useEffect } from "react";
+
 
 const AboutSection = () => {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsFlipped((prev) => !prev);
+    }, 3000); // Flip every 3 seconds
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div className="bg-white w-full min-h-screen flex flex-col justify-center items-center px-4 py-12">
       <div className="max-w-6xl w-full grid md:grid-cols-2 gap-8 items-center">
@@ -130,29 +140,49 @@ const AboutSection = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.4 }}
-        className="bg-gray-50 rounded-xl border mt-16 p-6 w-full max-w-4xl text-center"
+        className="bg-gray-50 rounded-xl border mt-12 w-full max-w-4xl text-center"
       >
-        <div className="flex flex-col md:flex-row justify-center items-center gap-3 text-gray-700 text-lg font-medium">
+        <div className="flex flex-cols-3 md:flex-row justify-center items-center text-gray-700 text-lg font-medium">
           <span>
             Learn Performance Marketing from the Experts who worked with…
           </span>
+           <div className="relative w-32 h-20 perspective">
+      <motion.div
+        animate={{ rotateY: isFlipped ? 180 : 0 }}
+        transition={{ duration: 0.8 }}
+        className="w-full h-full relative"
+        style={{ transformStyle: "preserve-3d" }}
+      >
+        {/* Front - Volvo */}
+        <div className="absolute w-full h-full backface-hidden flex items-center justify-center">
+          <img src="/volvo.svg" alt="Volvo" className="h-8" />
+        </div>
 
-          <div className="relative w-32 h-8 overflow-hidden">
-            <motion.img
-              src="/volvo.svg"
-              alt="Volvo"
-              className="absolute left-0 top-0 h-6 md:h-8"
-              animate={{ x: [0, 60, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            />
-            <motion.img
-              src="/nippo.svg"
-              alt="Nippo"
-              className="absolute left-16 top-0 h-6 md:h-8"
-              animate={{ x: [0, -60, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            />
-          </div>
+        {/* Back - Nippo */}
+        <div className="absolute w-full h-full backface-hidden transform rotateY-180 flex items-center justify-center ">
+          <img src="/nippo.svg" alt="Nippo" className="h-8" />
+        </div>
+      </motion.div>
+    </div>
+    <div className="relative w-32 h-20 perspective">
+      <motion.div
+        animate={{ rotateY: isFlipped ? 180 : 0 }}
+        transition={{ duration: 0.8 }}
+        className="w-full h-full relative"
+        style={{ transformStyle: "preserve-3d" }}
+      >
+        {/* Front - Volvo */}
+        <div className="absolute w-full h-full backface-hidden flex items-center justify-center ">
+          <img src="/nippo.svg" alt="Volvo" className="h-8" />
+        </div>
+
+        {/* Back - Nippo */}
+        <div className="absolute w-full h-full backface-hidden transform rotateY-180 flex items-center justify-center">
+          <img src="/volvo.svg" alt="Nippo" className="h-8" />
+        </div>
+      </motion.div>
+    </div>
+    
         </div>
       </motion.div>
     </div>

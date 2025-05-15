@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import "../index.css";
 
@@ -12,44 +12,37 @@ const audienceData = [
   { title: "Small Business Owners", image: "/c7.svg" },
 ];
 
-// Duplicate list for loop effect
-const repeatedData = [
-  ...audienceData,
-  ...audienceData,
-  ...audienceData,
-  ...audienceData,
-];
+// Duplicate list for smooth loop
+const repeatedData = [...audienceData, ...audienceData];
 
 const WhoShouldJoinCarousel = () => {
   const scrollRef = useRef(null);
-  const speedRef = useRef(10); // ✅ Declare at component level
+  const animationRef = useRef(null);
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
     const container = scrollRef.current;
     if (!container) return;
 
-    let animationFrameId;
-
-    // Gradually increase speed after delay
-    const speedIncreaseTimeout = setTimeout(() => {
-      speedRef.current = 15;
-    }, 10000); // 3 seconds
+    const scrollSpeed = 0.5; // Slower for smoothness
 
     const autoScroll = () => {
-      container.scrollLeft += speedRef.current;
-      if (container.scrollLeft >= container.scrollWidth / 2) {
-        container.scrollLeft = 0;
+      if (!isPaused) {
+        container.scrollLeft += scrollSpeed;
+        if (container.scrollLeft >= container.scrollWidth / 2) {
+          container.scrollLeft = 0; // Loop back
+        }
       }
-      animationFrameId = requestAnimationFrame(autoScroll);
+      animationRef.current = requestAnimationFrame(autoScroll);
     };
 
-    animationFrameId = requestAnimationFrame(autoScroll);
+    animationRef.current = requestAnimationFrame(autoScroll);
 
-    return () => {
-      clearTimeout(speedIncreaseTimeout);
-      cancelAnimationFrame(animationFrameId);
-    };
-  }, []);
+    return () => cancelAnimationFrame(animationRef.current);
+  }, [isPaused]);
+
+  const handleMouseEnter = () => setIsPaused(true);
+  const handleMouseLeave = () => setIsPaused(false);
 
   return (
     <div className="relative py-16 px-4 md:px-12 bg-white font-sans overflow-hidden">
@@ -71,7 +64,9 @@ const WhoShouldJoinCarousel = () => {
       {/* Carousel */}
       <div
         ref={scrollRef}
-        className="flex gap-4 overflow-x-scroll scroll-smooth no-scrollbar relative z-0"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        className="flex gap-4 overflow-x-scroll no-scrollbar scroll-smooth"
         style={{
           whiteSpace: "nowrap",
           scrollbarWidth: "none",
@@ -84,18 +79,18 @@ const WhoShouldJoinCarousel = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{
-              duration: 0.3,
+              duration: 0.4,
               delay: (index % audienceData.length) * 0.1,
             }}
             viewport={{ once: true }}
-            className="flex-shrink-0 w-52 md:w-60 lg:w-64 h-100 relative rounded-xl overflow-hidden"
+            className="flex-shrink-0 w-44 sm:w-52 md:w-60 lg:w-64 h-100 md:h-64 relative rounded-xl overflow-hidden shadow-md"
           >
             <img
               src={audience.image}
               alt={audience.title}
               className="w-full h-full object-cover"
             />
-            <div className="absolute bottom-4 w-full bg-black bg-opacity-50 py-3 text-center">
+            <div className="absolute bottom-4 w-full bg-black bg-opacity-50 py-2 text-center">
               <p className="text-white text-sm font-semibold px-2">
                 {audience.title}
               </p>
