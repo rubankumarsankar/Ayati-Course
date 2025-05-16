@@ -115,7 +115,7 @@ const AboutSection = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-sky-500 text-white font-secondary font-bold px-8 py-3 rounded-full shadow"
+              className="bg-sky-500 text-white font-secondary font-bold px-8 py-2 rounded-full shadow"
             onClick={() => setModalOpen(true)} >
               Get Started
             </motion.button>

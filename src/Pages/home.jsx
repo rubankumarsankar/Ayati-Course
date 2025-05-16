@@ -27,6 +27,7 @@ const Hero = () => {
     <section className="bg-gradient-to-r from-blue-50 to-white min-h-screen hero-section hero-section::before">
       {/* Header */}
       <header className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+        <a href="/">
         <div className="flex items-center gap-3">
           <img
             src="/ayatiworks_logo.svg"
@@ -34,11 +35,12 @@ const Hero = () => {
             className="h-10"
           />
         </div>
+        </a>
         <nav className="hidden md:flex space-x-6 text-gray-700 font-medium">
-          <a href="#" className="hover:text-sky font-secondary nav-button">
+          <a href="/" className="hover:text-sky font-secondary nav-button">
             Home
           </a>
-          <a href="#" className="hover:text-sky font-secondary nav-button">
+          <a href="#" className="hover:text-sky font-secondary nav-button" onClick={() => setModalOpen(true)} >
             Contact us
           </a>
         </nav>
@@ -125,14 +127,14 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row justify-center gap-4 mt-4">
           <button
             type="button"
-            className="text-white font-tertiary bg-sky-500 hover:bg-sky-600 focus:ring-4 focus:ring-sky-300 font-bold rounded-lg text-sm sm:text-base md:text-lg px-6 py-2.5"
+            className="text-white font-tertiary bg-sky-500 hover:bg-sky-600 focus:ring-4 focus:ring-sky-300 font-bold rounded-lg text-sm sm:text-base md:text-lg px-6 py-2"
           onClick={() => setModalOpen(true)} >
             Get Started
           </button>
           <EmailModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
           <button
             type="button"
-            className="text-sky-600 font-tertiary hover:text-white border-2 border-white hover:bg-sky-500 focus:ring-4 focus:outline-none font-bold rounded-lg text-sm sm:text-base md:text-lg px-6 py-2.5"
+            className="text-sky-600 font-tertiary hover:text-white border-2 border-white hover:bg-sky-500 focus:ring-4 focus:outline-none font-bold rounded-lg text-sm sm:text-base md:text-lg px-6 py-2"
           >
             Join the Course
           </button>
