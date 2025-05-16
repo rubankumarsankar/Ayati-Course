@@ -8,8 +8,8 @@ const EmailModal = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    subject: "",
-    message: "",
+    phone: "",
+    // message: "",
   });
 
   const handleChange = (e) => {
@@ -57,18 +57,19 @@ const EmailModal = ({ isOpen, onClose }) => {
 
         {/* Modal Header */}
         <h2 className="text-2xl font-bold text-center text-sky-600 mb-6">
-          ✉️ Send a Message
+          ✉️ Enquriy Form For Ayatiworks
         </h2>
 
         {/* Modal Form */}
-        <form onSubmit={handleSubmit} className="space-y-5">
+        <form onSubmit={handleSubmit} className="space-y-5 py-2">
           <input
             type="text"
             name="name"
             placeholder="Your Name"
             value={formData.name}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-sky-400"
+            autoComplete="off"
+            className="w-full px-4 py-3  border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-sky-400"
             required
           />
           <input
@@ -77,19 +78,21 @@ const EmailModal = ({ isOpen, onClose }) => {
             placeholder="Your Email"
             value={formData.email}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-sky-400"
+            autoComplete="off"
+            className="w-full px-4 py-3 mt-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-sky-400"
             required
           />
           <input
             type="text"
-            name="subject"
-            placeholder="Subject"
-            value={formData.subject}
+            name="phone"
+            placeholder="Phone Number"
+            value={formData.phone}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-sky-400"
+            autoComplete="off"
+            className="w-full px-4 py-3 mt-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-sky-400"
             required
           />
-          <textarea
+          {/* <textarea
             name="message"
             rows="4"
             placeholder="Your Message"
@@ -97,13 +100,13 @@ const EmailModal = ({ isOpen, onClose }) => {
             onChange={handleChange}
             className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm resize-none focus:outline-none focus:ring-2 focus:ring-sky-400"
             required
-          ></textarea>
+          ></textarea> */}
 
           <button
             type="submit"
-            className="w-full bg-sky-500 hover:bg-sky-600 text-white font-semibold py-3 rounded-lg transition"
+            className="w-100 bg-sky-500 mt-3 hover:bg-sky-600 text-white font-semibold py-3 rounded-lg transition"
           >
-            Send Email
+            Submit
           </button>
         </form>
       </div>

@@ -98,12 +98,12 @@ const CourseSchedule = () => {
                 )}
                 {/* Timeline dot */}
                 <div className="absolute left-67.5 top-1">
-                  <div className={`w-4 h-4 rounded-full border-3  ${i === activeWeek ? week.color : week.color}`}></div>
+                  <div className={`w-5 h-5 rounded-full ${i === activeWeek ? week.color : week.color}`}></div>
                 </div>
               </div>
             ))}
             {/* Vertical timeline line */}
-            <div className="absolute left-75 top-1 bottom-1 w-px h-100 bg-gray-300"></div>
+            {/* <div className="absolute overflow-hidden left-75.5 top-0 bottom-1.5 w-px h-100 bg-gray-300"></div> */}
           </div>
         </div>
 
