@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "../index.css";
+import EmailModal from "./EmailModal";
+
 
 const steps = [
   {
@@ -34,6 +36,7 @@ const sizeClasses = [
 ];
 
 const CourseIntro = () => {
+  const [modalOpen, setModalOpen] = useState(false);
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -87,9 +90,12 @@ const CourseIntro = () => {
         </AnimatePresence>
       </div>
 
-      <button className="bg-sky-500 hover:bg-sky-600 transition-colors duration-200 text-white font-semibold py-2 px-6 sm:px-8 rounded-full shadow">
+      <button className="bg-sky-500 hover:bg-sky-600 transition-colors duration-200 text-white font-semibold py-2 px-6 sm:px-8 rounded-full shadow"
+      onClick={() => setModalOpen(true)} >
         Get Started
       </button>
+                <EmailModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
+
     </div>
   );
 };

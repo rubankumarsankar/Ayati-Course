@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
+import EmailModal from "./EmailModal";
 
 const AboutSection = () => {
+  const [modalOpen, setModalOpen] = useState(false);
   const [isFlipped, setIsFlipped] = useState(false);
 
   useEffect(() => {
@@ -114,10 +116,10 @@ const AboutSection = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-sky-500 text-white font-secondary font-bold px-8 py-3 rounded-full shadow"
-            >
+            onClick={() => setModalOpen(true)} >
               Get Started
             </motion.button>
-
+              <EmailModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
             <motion.a
               href="#how-it-works"
               className="text-black font-medium font-secondary flex items-center gap-1 hover:underline"
