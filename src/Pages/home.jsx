@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 import { ImPower } from "react-icons/im";
 import "../styles/home.css";
 import "../index.css";
+import EmailModal from "./EmailModal";
 
 const Hero = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
   const texts = ["Learn", "Advertise", "Succeed"];
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [fade, setFade] = useState(true);
@@ -20,12 +22,6 @@ const Hero = () => {
 
     return () => clearInterval(interval);
   }, []);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted!");
-    setIsOpen(false);
-  };
 
   return (
     <section className="bg-gradient-to-r from-blue-50 to-white min-h-screen hero-section hero-section::before">
@@ -46,6 +42,7 @@ const Hero = () => {
             Contact us
           </a>
         </nav>
+        
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden text-gray-700 focus:outline-none"
@@ -129,9 +126,10 @@ const Hero = () => {
           <button
             type="button"
             className="text-white font-tertiary bg-sky-500 hover:bg-sky-600 focus:ring-4 focus:ring-sky-300 font-bold rounded-lg text-sm sm:text-base md:text-lg px-6 py-2.5"
-          >
+          onClick={() => setModalOpen(true)} >
             Get Started
           </button>
+          <EmailModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
           <button
             type="button"
             className="text-sky-600 font-tertiary hover:text-white border-2 border-white hover:bg-sky-500 focus:ring-4 focus:outline-none font-bold rounded-lg text-sm sm:text-base md:text-lg px-6 py-2.5"
@@ -141,45 +139,6 @@ const Hero = () => {
         </div>
       </main>
 
-      {/* Modal */}
-      {isOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 px-4">
-          <div className="bg-white rounded-lg shadow-lg w-full max-w-md p-6 relative">
-            <button
-              className="absolute top-2 right-2 text-gray-500 hover:text-red-600 text-xl"
-              onClick={() => setIsOpen(false)}
-            >
-              &times;
-            </button>
-
-            <h2 className="text-xl font-bold mb-4">Contact Form</h2>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium">Name</label>
-                <input
-                  type="text"
-                  className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  required
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium">Email</label>
-                <input
-                  type="email"
-                  className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  required
-                />
-              </div>
-              <button
-                type="submit"
-                className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full"
-              >
-                Submit
-              </button>
-            </form>
-          </div>
-        </div>
-      )}
 
       {/* Feature Highlights */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 font-secondary">

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Toaster } from "react-hot-toast";
 import './App.css';
 
 // Page Components
@@ -37,6 +38,7 @@ function App() {
   return (
     <>
       <ScrollProgress />
+      <Toaster position="top-right" reverseOrder={false} />
       <Home />
       <GetTrainedSection />
       <Keypoint />

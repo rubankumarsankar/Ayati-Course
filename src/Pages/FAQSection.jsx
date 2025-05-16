@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
+import EmailModal from "./EmailModal";
+
 import "../index.css";
 
 const faqData = {
@@ -27,6 +29,7 @@ const faqData = {
 };
 
 const FAQSection = () => {
+  const [modalOpen, setModalOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState("Course Details");
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -108,9 +111,11 @@ const FAQSection = () => {
           <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
             Request More Information
           </h3>
-          <button className="bg-sky-500 text-white font-secondary font-semibold px-6 py-2 rounded-full hover:bg-sky-600 transition">
+          <button className="bg-sky-500 text-white font-secondary font-semibold px-6 py-2 rounded-full hover:bg-sky-600 transition" 
+          onClick={() => setModalOpen(true)} >
             Contact us
           </button>
+          <EmailModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
         </div>
       </div>
     </section>
