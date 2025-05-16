@@ -6,23 +6,23 @@ import EmailModal from "./EmailModal";
 
 const steps = [
   {
-    icons: ["Message.svg", "Lock.svg", "Home.svg", "Profile.svg", "Pencil.svg"],
+    icons: ["Message.svg", "/Lock.svg", "/Home.svg", "/Profile.svg", "/Pencil.svg"],
     text: "Difference between Performance Marketing & Digital Marketing",
   },
   {
-    icons: ["Lock.svg", "Home.svg", "Profile.svg", "Pencil.svg", "Message.svg"],
+    icons: ["/Lock.svg", "/Home.svg", "/Profile.svg", "/Pencil.svg", "/Message.svg"],
     text: "The current and future demand for Performance Marketers",
   },
   {
-    icons: ["Home.svg", "Profile.svg", "Pencil.svg", "Message.svg", "Lock.svg"],
+    icons: ["/Home.svg", "/Profile.svg", "/Pencil.svg", "/Message.svg", "/Lock.svg"],
     text: "Remuneration & Career Journey of Performance Marketers",
   },
   {
-    icons: ["Profile.svg", "Pencil.svg", "Message.svg", "Lock.svg", "Home.svg"],
+    icons: ["/Profile.svg", "/Pencil.svg", "/Message.svg", "/Lock.svg", "/Home.svg"],
     text: "A to Z Blueprint of Strategies a Performance Marketer needs to know",
   },
   {
-    icons: ["Pencil.svg", "Message.svg", "Lock.svg", "Home.svg", "Profile.svg"],
+    icons: ["/Pencil.svg", "/Message.svg", "/Lock.svg", "/Home.svg", "/Profile.svg"],
     text: "Time Tested Growth Hacks a Performance Marketer needs to Master",
   },
 ];
@@ -64,7 +64,7 @@ const CourseIntro = () => {
             ${sizeClasses[i]} ${i === 2 ? "ring-4 ring-sky-400" : ""}`}
           >
             <img
-              src={`/${icon}`}
+              src={`${icon}`}
               alt="icon"
               className={`object-contain ${
                 i === 2 ? "w-14 h-14" : "w-10 h-10"
