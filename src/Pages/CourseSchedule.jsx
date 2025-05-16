@@ -19,7 +19,7 @@ const weeks = [
   {
     title: "Week 2",
     subtitle: "Google Ads (Search, Display, & Shopping)",
-    color: "bg-blue-500",
+    color: "bg-pink-300",
     startDay: 6,
     days: [
       "Google Ads Foundations: Account & Campaign Types",
@@ -32,7 +32,7 @@ const weeks = [
   {
     title: "Week 3",
     subtitle: "LinkedIn Ads",
-    color: "bg-purple-400",
+    color: "bg-purple-300",
     startDay: 11,
     days: [
       "LinkedIn Ads: Objectives & Professional Targeting",
@@ -45,7 +45,7 @@ const weeks = [
   {
     title: "Week 4",
     subtitle: "Programmatic Advertising",
-    color: "bg-green-400",
+    color: "bg-green-300",
     startDay: 16,
     days: [
       "Programmatic Intro: DSPs & the Ecosystem",
@@ -70,7 +70,7 @@ const CourseSchedule = () => {
   }, []);
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-14 font-sans">
+    <div className="bg-white max-w-7xl mx-auto px-6 py-14 font-sans">
       <div className="grid grid-cols-12 gap-6 items-start relative">
         <div className="col-span-1"></div>
 
@@ -83,7 +83,7 @@ const CourseSchedule = () => {
                 onClick={() => setActiveWeek(i)}
                 className="relative cursor-pointer transition-all"
               >
-                <h4 className={`text-lg font-primary font-bold ${i === activeWeek ? "text-blue-600" : "text-gray-600"}`}>
+                <h4 className={`text-xl font-primary font-bold ${i === activeWeek ? "text-sky" : "text-gray-600"}`}>
                   {week.title}
                 </h4>
                 {i === activeWeek && (
@@ -91,14 +91,14 @@ const CourseSchedule = () => {
                     initial={{ opacity: 0, y: 4 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -4 }}
-                    className="text-sm font-secondary text-blue-500"
+                    className="text-lg font-secondary text-sky"
                   >
                     {week.subtitle}
                   </motion.p>
                 )}
                 {/* Timeline dot */}
                 <div className="absolute left-67.5 top-1">
-                  <div className={`w-4 h-4 rounded-full ${i === activeWeek ? week.color : "bg-gray-300"}`}></div>
+                  <div className={`w-4 h-4 rounded-full border-3  ${i === activeWeek ? week.color : week.color}`}></div>
                 </div>
               </div>
             ))}

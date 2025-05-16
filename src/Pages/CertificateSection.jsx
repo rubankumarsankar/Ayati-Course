@@ -68,7 +68,7 @@ export default function HighlightsSection() {
         </div>
 
         {/* Certificate Image on the Right */}
-        <div className="w-full flex flex-col-2 absolute justify-end">
+        <div className="w-full sm:flex flex-col-2 absolute object-contain hidden sm:block sm:justify-end">
           <img
             src="/Certificate-1.svg"
             alt="Certificate Preview"

@@ -25,11 +25,11 @@ const Certificate = () => {
           </div>
 
           {/* Certificate Image on the Right */}
-          <div className="w-full flex flex-col-2 absolute justify-end">
+          <div className="w-full flex flex-col-2 absolute object-contain justify-end">
             <img
               src="/Clip.svg"
               alt="Certificate Preview"
-              className="w-full max-w-[350px] items-end sm:max-w-[400px] object-contain shadow-md"
+              className="w-full max-w-[150px] items-end sm:max-w-[400px] object-contain shadow-md"
             />
           </div>
         </div>

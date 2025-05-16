@@ -3,32 +3,41 @@ import { motion } from "framer-motion";
 import "../index.css";
 
 
-const steps = [
-  { label: "Step 1", text: "Step on to our AdQuarter Mastery Program", top: "18%", left: "17%" },
-  { label: "Step 2", text: "Join Our Community of Learners & Experts on WhatsApp after the payment", top: "54.5%", left: "33.5%" },
-  { label: "Step 3", text: "Attend live 5 interactive Course", top: "25%", left: "38%" },
-  { label: "Step 4", text: "Work on Live Projects", top: "76%", left: "63%" },
-  { label: "Step 5", text: "Learn other courses if interested", top: "26.5%", left: "64%" },
-  { label: "Step 6", text: "Bag your internship on Ayin’s Ship", top: "24%", left: "92%" },
-];
+// const steps = [
+//   { label: "Step 1", text: "Step on to our AdQuarter Mastery Program", top: "18%", left: "17%" },
+//   { label: "Step 2", text: "Join Our Community of Learners & Experts on WhatsApp after the payment", top: "54.5%", left: "33.5%" },
+//   { label: "Step 3", text: "Attend live 5 interactive Course", top: "25%", left: "38%" },
+//   { label: "Step 4", text: "Work on Live Projects", top: "76%", left: "63%" },
+//   { label: "Step 5", text: "Learn other courses if interested", top: "26.5%", left: "64%" },
+//   { label: "Step 6", text: "Bag your internship on Ayin’s Ship", top: "24%", left: "92%" },
+// ];
 
 const RoadMap = () => {
   return (
-    <div className="relative w-full px-4 py-12 max-w-9xl mx-auto">
-      <h2 className="text-3xl sm:text-4xl font-bold text-center text-sky mb-6">
-        Road Map
-      </h2>
+    <div className="bg-white relative w-full px-4 max-w-9xl mx-auto">
+  <h2 className="text-3xl sm:text-4xl font-bold text-center text-sky mb-6">
+    Road Map
+  </h2>
 
-      {/* Background Roadmap Image */}
-      <div className="relative w-full">
-        <img
-          src="/Fream-1.svg"
-          alt="Roadmap"
-          className="w-full h-auto object-contain"
-        />
+  {/* Background Roadmap Image */}
+  <div className="relative w-full">
+
+    {/* Desktop & Tablet View Image */}
+    <img
+      src="/Map.svg"  // Use your desktop version here
+      alt="Roadmap Desktop"
+      className="w-full h-auto object-contain hidden sm:block"
+    />
+
+    {/* Mobile View Image */}
+    <img
+      src="/Map_Mobile.svg"  // Use your mobile version here
+      alt="Roadmap Mobile"
+      className="w-full h-auto object-contain block sm:hidden"
+    />
 
         {/* Overlay Step Content */}
-        <div className="absolute inset-0">
+        {/* <div className="absolute inset-0">
           {steps.map((step, i) => (
             <motion.div
               key={i}
@@ -50,7 +59,7 @@ const RoadMap = () => {
               </div>
             </motion.div>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );

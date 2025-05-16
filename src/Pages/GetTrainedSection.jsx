@@ -72,7 +72,7 @@ const GetTrainedSection = () => {
                 High-Ticket Client Strategies
               </h3>
               <p className="text-gray-800 text-secondary  mt-2 text-sm">
-                Learn from seasoned professionals shaping the industry.
+                Gain insights from experts handling premium global clients.
               </p>
             </div>
 
@@ -83,7 +83,7 @@ const GetTrainedSection = () => {
               </div>
               <h3 className="font-bold text-lg font-primary mt-4">Global Mentorship</h3>
               <p className="text-gray-800 mt-2 text-secondary  text-sm">
-                Gain insights from experts handling premium global clients.
+                Train with Ayatiworks professionals across India, Chennai, New Zealand, Singapore, and the U.S.
               </p>
             </div>
           </div>

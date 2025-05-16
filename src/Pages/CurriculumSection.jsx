@@ -31,7 +31,7 @@ const curriculumData = [
 
 const CurriculumSection = () => {
   return (
-    <section className="py-15 px-4 max-w-7xl mx-auto">
+    <section className="bg-white py-15 px-4 max-w-7xl mx-auto">
       <h2 className="text-4xl sm:text-4xl font-primary font-bold text-center text-sky mb-2 py-2">
         Our Curriculum Covers
       </h2>

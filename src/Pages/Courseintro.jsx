@@ -44,7 +44,7 @@ const CourseIntro = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center bg-white px-4 sm:px-6 md:px-8 lg:px-12 py-10 md:py-16">
+    <div className="flex flex-col items-center justify-center bg-white px-4 sm:px-6 md:px-8 lg:px-8 md:py-10">
       <h2 className="text-xl sm:text-2xl font-primary text-sky md:text-3xl font-semibold text-center mb-6 sm:mb-8">
         What will you learn in the Course?
       </h2>

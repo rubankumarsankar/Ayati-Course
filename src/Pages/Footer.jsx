@@ -7,6 +7,7 @@ import {
   FaInstagram,
   FaYoutube,
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -25,13 +26,13 @@ const Footer = () => {
         {/* Middle: Links */}
         <div className="flex space-x-6 text-sm font-semibold text-gray-700">
           <a
-            href="/privacy-policy"
+            href="https://ayatiworks.com/privacy-policy"
             className="hover:text-sky font-secondary transition nav-button"
           >
             Privacy Policy
           </a>
           <a
-            href="/terms"
+            href="https://ayatiworks.com/terms-and-conditions"
             className="hover:text-sky font-secondary  transition nav-button"
           >
             Terms & Conditions
@@ -41,7 +42,7 @@ const Footer = () => {
         {/* Right: Social Icons */}
         <div className="flex space-x-5">
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/company/ayatiworks/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sky border border-sky-100 p-2 rounded-full hover:bg-sky-200 hover:tex-white transition"
@@ -49,7 +50,7 @@ const Footer = () => {
             <FaLinkedinIn />
           </a>
           <a
-            href="https://facebook.com"
+            href="https://www.facebook.com/ayatiworkstechnologies/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sky border border-sky-100 p-2 rounded-full hover:bg-sky-200 hover:tex-white transition"
@@ -57,7 +58,7 @@ const Footer = () => {
             <FaFacebookF />
           </a>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/ayatiworks/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sky border border-sky-100 p-2 rounded-full hover:bg-sky-200 hover:tex-white transition"
@@ -65,12 +66,20 @@ const Footer = () => {
             <FaInstagram />
           </a>
           <a
-            href="https://youtube.com"
+            href="https://www.youtube.com/@ayatiworks"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sky border border-sky-100 p-2 rounded-full hover:bg-sky-200 hover:tex-white transition"
           >
             <FaYoutube />
+          </a>
+          <a
+            href="https://x.com/i/flow/login?redirect_after_login=%2FAyatiworks1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sky border border-sky-100 p-2 rounded-full hover:bg-sky-200 hover:tex-white transition"
+          >
+            <FaXTwitter />
           </a>
         </div>
       </div>

@@ -44,7 +44,7 @@ function App() {
       <Keypoint />
       <CertificateSection />
       <NewsBanner />
-      <CurriculumSection />
+      <CurriculumSection className="bg-white "/>
       <CourseSchedule />
       <RoadMap />
       <WhoShouldJoinCarousel />

@@ -143,9 +143,9 @@ const AboutSection = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.4 }}
-        className="bg-gray-50 rounded-xl border mt-12 w-full max-w-4xl text-center"
+        className="bg-gray-50 rounded-xl border mt-12 w-full max-w-6xl text-center"
       >
-        <div className="flex flex-cols-3 md:flex-row font-secondary justify-center items-center text-gray-700 text-lg font-medium">
+        <div className="flex flex-cols2 md:flex-row font-secondary justify-center items-center text-gray-700 text-xl font-medium">
           <span>
             Learn Performance Marketing from the Experts who worked with…
           </span>
