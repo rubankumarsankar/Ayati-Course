@@ -29,14 +29,14 @@
 
 .hero-section {
   position: relative;
-  height: 100vh;
+  height: 80vh;
   background-image: linear-gradient(120deg, rgba(255, 73, 73, 0), rgba(63, 199, 240, 0.438)), url('/bg-grid.png');
-  background-size: 300% 300%, cover;
-  background-position: 0% 50%, center;
+  /* background-size: 100% 100%, cover; */
+  background-position: 0% 70%, center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   animation: gradientMove 5s ease infinite;
-  overflow: hidden; /* Ensure animated element stays within */
+  overflow: hidden;
 }
 
 @keyframes gradientMove {
